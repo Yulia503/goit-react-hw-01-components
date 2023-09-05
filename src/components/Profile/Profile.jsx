@@ -4,7 +4,7 @@ import {
   ProfileCard,
   Description,
   Avatar,
-  UserName,
+  Name,
   Tag,
   Location,
   StatsInformationList,
@@ -14,16 +14,16 @@ import {
 } from './Profile.styled';
 
 export const Profile = ({ username, avatar, tag, location, stats }) => {
-  return (
+  return ( // диструктуризуємо і поверт. картку.
     <ProfileCard>
       <Description>
-        <Avatar src={avatar} alt="User avatar" />
-        <UserName>{username}</UserName>
+        <Avatar src={avatar} alt="User" />
+        <Name>{username}</Name>
         <Tag>@{tag}</Tag>
         <Location>{location}</Location>
       </Description>
 
-      <StatsInformationList>
+      <StatsInformationList> 
         < StatsInformationItem>
           <Label>Followers</Label>
           <Quantity>{stats.followers}</Quantity>
